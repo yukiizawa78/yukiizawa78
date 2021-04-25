@@ -1,9 +1,17 @@
 'use strict';
 
 {
-  const mousepoint = {
+  const point = {
     x: 100,
     y: 180,
   };
-  console.log(mousepoint);
+
+point.x = 120;
+
+  // console.log(point.x);
+  // console.log(point['y']);
+
+  point.z = 90;
+  delete point.y;
+  console.log(point);
 }
