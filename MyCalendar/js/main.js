@@ -22,7 +22,7 @@ console.clear();
       });
     }
 
-    console.log(dates);
+    return dates;
   }
 
   function getCalendarBody() {
@@ -37,7 +37,7 @@ console.clear();
       });
     }
 
-    console.log(dates);
+    return dates;
   }
 
   function getCalendarTail() {
@@ -51,10 +51,19 @@ console.clear();
         isDisabled: true,
       });
     }
+    return dates;
+
+  }
+
+  function createCalendar() {
+    const dates = [
+      ...getCalendarHead(),
+      ...getCalendarBody(),
+      ...getCalendarTail(),
+    ];
+
     console.log(dates);
   }
 
-  // getCalendarHead();
-  // getCalendarBody();
-  getCalendarTail();
+  createCalendar();
 }
