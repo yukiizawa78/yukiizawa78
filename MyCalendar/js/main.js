@@ -51,8 +51,8 @@ console.clear();
         isDisabled: true,
       });
     }
-    return dates;
 
+    return dates;
   }
 
   function createCalendar() {
@@ -61,8 +61,15 @@ console.clear();
       ...getCalendarBody(),
       ...getCalendarTail(),
     ];
+    const weeks = [];
+    const weeksCount = dates.length / 7;
 
-    console.log(dates);
+    for (let i = 0; i < weeksCount; i++) {
+      weeks.push(dates.splice(0, 7));
+    }
+
+    // console.log(dates);
+    console.log(weeks);
   }
 
   createCalendar();
